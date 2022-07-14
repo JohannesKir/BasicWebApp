@@ -52,7 +52,7 @@ public class QueryProcessor {
             for (int i = 0; i < zahlen.length; i++) {
                 try {
                     int a = Integer.parseInt(eachNumber[i]);
-                    if ( (int)Math.sqrt(a) * (int)Math.sqrt(a) == a ) {
+                    if ( (int)Math.sqrt(a) * (int)Math.sqrt(a) == a && (int)Math.pow(a, 1.0/3) * (int)Math.pow(a, 1.0/3) * (int)Math.pow(a, 1.0/3) == a) {
                         return "";
                     }
                 } catch(Exception ex){
