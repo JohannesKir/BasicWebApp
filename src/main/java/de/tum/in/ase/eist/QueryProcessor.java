@@ -30,21 +30,18 @@ public class QueryProcessor {
                 }
             }
             return "" + max;
-//        } else if (query.contains("plus")) {
-//            String aufgabe = query.split("what is ")[1];
-//            String[] eachNumber = aufgabe.split(", ");
-//            int[] zahlen = new int[eachNumber.length];
-//            int max = 0;
-//            for (int i = 0; i < zahlen.length; i++) {
-//                try {
-//                    if (Integer.parseInt(eachNumber[i]) > max) {
-//                        max = Integer.parseInt(eachNumber[i]);
-//                    }
-//                } catch(Exception ex){
-//
-//                }
-//            }
-//            return "" + max;
+        } else if (query.contains("plus")) {
+            String aufgabe = query.split("what is ")[1];
+            String[] eachNumber = aufgabe.split(" plus ");
+            int[] zahlen = new int[eachNumber.length];
+            int max = 0;
+            for (int i = 0; i < zahlen.length; i++) {
+                try {
+                    zahlen[i] = Integer.parseInt(eachNumber[i]);
+                } catch(Exception ex){
+                }
+            }
+            return "" + zahlen[0] + zahlen[1];
         } else {
             return "";
         }
