@@ -16,6 +16,7 @@ public class QueryProcessor {
         } else if (query.contains("name")) {
            return "EIST ist Spitze";
         } else if (query.contains("largest")) {
+//            return "keine ahnung";
             String numbers = query.split(": ")[1];
             String[] eachNumber = numbers.split(", ");
             int[] zahlen = new int[eachNumber.length];
