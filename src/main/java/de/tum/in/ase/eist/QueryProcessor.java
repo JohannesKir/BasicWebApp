@@ -21,12 +21,30 @@ public class QueryProcessor {
             int[] zahlen = new int[eachNumber.length];
             int max = 0;
             for (int i = 0; i < zahlen.length; i++) {
-                if (Integer.parseInt(eachNumber[i]) > max) {
-                    max = Integer.parseInt(eachNumber[i]);
-                }
+                try {
+                    if (Integer.parseInt(eachNumber[i]) > max) {
+                        max = Integer.parseInt(eachNumber[i]);
+                    }
+                } catch(Exception ex){
 
+                }
             }
             return "" + max;
+//        } else if (query.contains("plus")) {
+//            String aufgabe = query.split("what is ")[1];
+//            String[] eachNumber = aufgabe.split(", ");
+//            int[] zahlen = new int[eachNumber.length];
+//            int max = 0;
+//            for (int i = 0; i < zahlen.length; i++) {
+//                try {
+//                    if (Integer.parseInt(eachNumber[i]) > max) {
+//                        max = Integer.parseInt(eachNumber[i]);
+//                    }
+//                } catch(Exception ex){
+//
+//                }
+//            }
+//            return "" + max;
         } else {
             return "";
         }
