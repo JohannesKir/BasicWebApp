@@ -44,6 +44,22 @@ public class QueryProcessor {
             }
             int number = zahlen[0] + zahlen[1];
             return "" + number;
+        } else if (query.contains("square and a cube")) {
+            String aufgabe = query.split(": ")[1];
+            String[] eachNumber = aufgabe.split(", ");
+            int[] zahlen = new int[eachNumber.length];
+            int max = 0;
+            for (int i = 0; i < zahlen.length; i++) {
+                try {
+                    int a = Integer.parseInt(eachNumber[i]);
+                    if ( (int)Math.sqrt(a) * (int)Math.sqrt(a) == a ) {
+                        return "";
+                    }
+                } catch(Exception ex){
+                }
+            }
+            int number = zahlen[0] + zahlen[1];
+            return "" + number;
         } else {
             return "";
         }
