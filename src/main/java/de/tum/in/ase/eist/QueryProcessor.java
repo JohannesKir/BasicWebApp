@@ -42,7 +42,8 @@ public class QueryProcessor {
                 } catch(Exception ex){
                 }
             }
-            return "" + zahlen[0] + zahlen[1];
+            int number = zahlen[0] + zahlen[1];
+            return "" + number;
         } else {
             return "";
         }
