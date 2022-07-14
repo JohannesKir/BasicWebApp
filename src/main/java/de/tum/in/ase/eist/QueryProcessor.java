@@ -57,7 +57,7 @@ public class QueryProcessor {
             }
             int number = zahlen[0] + zahlen[1];
             return "" + number;
-        } else if (query.contains("square and a cube")) {
+//        } else if (query.contains("square and a cube")) {
 //            String aufgabe = query.split(": ")[1];
 //            String[] eachNumber = aufgabe.split(", ");
 //            int[] zahlen = new int[eachNumber.length];
