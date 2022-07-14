@@ -31,7 +31,20 @@ public class QueryProcessor {
                 }
             }
             return "" + max;
-        } else if (query.contains("plus")) {
+        }  else if (query.contains("multiplied")) {
+            String aufgabe = query.split("what is ")[1];
+            String[] eachNumber = aufgabe.split(" multiplied by ");
+            int[] zahlen = new int[eachNumber.length];
+            int max = 0;
+            for (int i = 0; i < zahlen.length; i++) {
+                try {
+                    zahlen[i] = Integer.parseInt(eachNumber[i]);
+                } catch(Exception ex){
+                }
+            }
+            int number = zahlen[0] * zahlen[1];
+            return "" + number;
+        }else if (query.contains("plus")) {
             String aufgabe = query.split("what is ")[1];
             String[] eachNumber = aufgabe.split(" plus ");
             int[] zahlen = new int[eachNumber.length];
